@@ -7,7 +7,7 @@
         
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 md:grid-cols-3 mt-5">
         <template x-for="project in $store.AllProjects.projects.Projects" :key="project.project_name">
-            <a :href="project.link" class="group relative block bg-black">
+            <a target="_blank" :href="project.link" class="group relative block bg-black">
                 <img alt=""
                     :src="'/public/'+ project.img"
                     class="absolute inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50" />
