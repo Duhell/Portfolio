@@ -1,0 +1,67 @@
+<div x-data x-effect="$dispatch('ContactLoaded')" id="contact" hx-trigger="load" hx-get="/resources/partials/footer.html" hx-target="#footer" class="grid grid-cols-1 md:grid-cols-6 gap-2">
+    <div class="bg-custom-900 md:col-span-2 p-6 rounded">
+        <h1 class="font-bold block mb-3 text-3xl">Contact Me</h1>
+        <div class="mt-3">
+            <div class="inline-flex gap-2 items-center">
+                <i class='bx bxs-location-plus bx-xs'></i>
+                <span class="text-md">Municipality of Ilog, Negros Occidental</span>
+            </div>
+            <div class="inline-flex gap-2 items-center">
+                <i class='bx bxs-phone bx-xs'></i>
+                <span class="text-md">09085901651</span>
+            </div>
+            <div class="inline-flex gap-2 items-center">
+                <i class='bx bxs-envelope bx-xs'></i>
+                <a class="text-md truncate" target="_blank" href="mailto:villarma.ryantempla@gmail.com">
+                    villarma.ryantempla@gmail.com </a>
+            </div>
+        </div>
+        <div class="mt-4">
+            <iframe id="map" class="w-full skeleton bg-zinc-900 rounded h-auto" style="border:0" loading="lazy" allowfullscreen
+                referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCm0X3ceS1mBnU-Vods3Vy1xSRNSPP8KlE
+                     &q=Ilog,Negros+Occidental">
+            </iframe>
+        </div>
+    </div>
+    <div class="col-span-1 md:col-span-4 space-y-2">
+        <div class="bg-custom-900 rounded p-6 ">
+            <div class="mb-6 ">
+                <h1 class="font-bold block text-lg">Send mail</h1>
+                <small><em>All fields are required.</em></small>
+            </div>
+            <form id="formSubmit" class="leading-4 grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <label class="input bg-transparent shadow-white/10 border border-white/20 shadow flex items-center gap-2">
+                        Name <span class="text-red-600">*</span>
+                        <input id="fullname" required type="text" class="grow" placeholder="" />
+                    </label>
+                </div>
+
+                <div>
+                    <label class="input bg-transparent shadow-white/10 border border-white/20 shadow flex items-center gap-2">
+                        Email <span class="text-red-600">*</span>
+                        <input id="email" required type="text" class="grow" placeholder="" />
+                    </label>
+                </div>
+
+                <div class="col-span-full">
+                    <textarea id="message" class="textarea shadow-white/10 border border-white/20 shadow  textarea-bordered bg-transparent w-full" placeholder="Message"></textarea>
+                </div>
+
+                <div class="flex justify-end col-span-full">
+                    <button class="inline-flex gap-2 items-center shadow shadow-white/10 btn btn-sm" data-theme="dark" type="submit">
+                        <span>Send Message</span>                          
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
+                            <path d="M3.478 2.404a.75.75 0 0 0-.926.941l2.432 7.905H13.5a.75.75 0 0 1 0 1.5H4.984l-2.432 7.905a.75.75 0 0 0 .926.94 60.519 60.519 0 0 0 18.445-8.986.75.75 0 0 0 0-1.218A60.517 60.517 0 0 0 3.478 2.404Z" />
+                          </svg>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div id="footer"></div>
+
+<script>
+
+</script>

@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+::-webkit-scrollbar{
+    width: 8px;
+}
+::-webkit-scrollbar-track{
+    background-color:#181a1a;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: rgb(198, 200, 202);
+}
+
+[x-cloak]{
+    display: none;
+}
+
+body{
+    font-family: "Mulish", sans-serif;
+    color: rgb(198, 200, 202);
+    position: relative;
+}
+
+.bg{
+    background-color: #111212;
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+}
+.bg-custom-300{
+    background-color: #adb3b2;
+}
+
+.bg-custom-900{
+    background-color: #181a1a;
+}
+
+.bg-custom-950{
+    background-color: #111212;
+}
+
+.active{
+    color: #697170;
+}

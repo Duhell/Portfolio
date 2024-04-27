@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hi, I'M Ryan Villarma, a passionate Web Developer based in the Philippines.">
+    <meta name="robots" content="index,follow">
+    <link rel="icon" type="image/x-icon" href="/public/favicon.ico">
+    <title>Ryan Villarma</title>
+    <link rel="stylesheet" href="./resources/css/app.css">
+
+    <script type="module" src="./resources/js/app.js"></script>
+
+    <!-- Dependencies -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/htmx.org@1.9.12" integrity="sha384-ujb1lZYygJmzgSwoxRggbCHcjc0rB2XoQrxeTUQyRjrOnlCoYta87iKBWq3EsdM2" crossorigin="anonymous"></script>
+    <!-- Dependencies -->
+
+</head>
+<body>
+    <div class="bg"></div>
+    <div hx-trigger="load" hx-get="./resources/partials/nav.html"></div>
+    <div id="app" hx-trigger="load" hx-target="#app" hx-get="./resources/views/home.html" class="container mx-auto p-7"></div>
+</body>
+</html>
