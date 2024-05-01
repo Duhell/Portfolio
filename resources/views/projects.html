@@ -1,16 +1,21 @@
 <section x-data x-init="$dispatch('ProjectsLoaded')" hx-trigger="load" hx-get="/resources/partials/footer.html" hx-target="#footer">
 
-    <div>
+    <div data-aos="fade-right">
         <h1 class="font-bold block mb-3 text-3xl">Projects</h1>
-        <p class="text-sm">Below is a mixed of personal and clients work. You can visit <a class="text-blue-400" href="https://github.com/Duhell?tab=repositories">here</a> all the repos. </p>
+        <p class="text-sm">My works. You can visit <a class="text-blue-400" href="https://github.com/Duhell?tab=repositories">here</a> to check all of my repos. </p>
     </div>
         
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 md:grid-cols-3 mt-5">
+        <div data-theme="dark" x-show="!$store.AllProjects.projects.Projects" class="skeleton w-full h-96"></div>
+        <div data-theme="dark" x-show="!$store.AllProjects.projects.Projects" class="skeleton w-full h-96"></div>
+        <div data-theme="dark" x-show="!$store.AllProjects.projects.Projects" class="skeleton w-full h-96"></div>
+        <div data-theme="dark" x-show="!$store.AllProjects.projects.Projects" class="skeleton w-full h-96"></div>
+        <div data-theme="dark" x-show="!$store.AllProjects.projects.Projects" class="skeleton w-full h-96"></div>
         <template x-for="project in $store.AllProjects.projects.Projects" :key="project.project_name">
-            <a target="_blank" :href="project.link" class="group relative block bg-black">
+            <a target="_blank" :href="project.link" class="group  rounded-lg relative block bg-black">
                 <img alt=""
                     :src="'/public/'+ project.img"
-                    class="absolute inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50" />
+                    class="absolute rounded-lg inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50" />
         
                 <div class="relative p-4 sm:p-6 lg:p-8">
                     <p class="text-sm font-medium uppercase tracking-widest badge badge-neutral text-yellow-500" x-text="project.status"></p>

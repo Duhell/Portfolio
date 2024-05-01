@@ -12,5 +12,7 @@ window.addEventListener('ProjectsLoaded',() => {
             })
         }
     })
-    Alpine.store('AllProjects').fetchData();
+    setTimeout(function(){
+        Alpine.store('AllProjects').fetchData();
+    },1000)
 })

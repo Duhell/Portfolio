@@ -1,5 +1,5 @@
-<div hx-trigger="load" hx-get="/resources/partials/footer.html" hx-target="#footer" class="grid grid-cols-1 md:grid-cols-6 gap-2">
-    <div class="bg-custom-900 md:col-span-2 p-6 rounded">
+<div x-data x-init="$dispatch('AboutLoaded')" hx-trigger="load" hx-get="/resources/partials/footer.html" hx-target="#footer" class="grid grid-cols-1 md:grid-cols-6 gap-2">
+    <div data-aos="fade-right" class="bg-custom-900 md:col-span-2 p-6 rounded">
         <h1 class="font-bold block mb-3 text-3xl">About Me</h1>
         <p class="text-md">I am Ryan, an aspiring and passionate web developer. I am a 4th-year Engineering Technology
             major in Computer Engineering Technology.
@@ -33,9 +33,16 @@
                 <span>Tailwind, AlpineJS, Laravel, Livewire</span>
             </div>
         </div>
+
+        <div x-data="stream" class="mt-5 p-4 rounded">
+            <h2>Resume:</h2>
+            <div >
+                <button class="text-blue-500 text-sm" x-on:click="openResume('/public/Villarma_Resume.pdf')">Villarma-Resume.pdf</button>
+            </div>
+        </div>
     </div>
 
-    <div class="col-span-1 md:col-span-4 space-y-2">
+    <div data-aos="fade-up" class="col-span-1 md:col-span-4 space-y-2">
         <div class="bg-custom-900 rounded p-6 ">
             <h1 class="font-bold block mb-6 text-lg">Education</h1>
             <div class="leading-4 grid grid-cols-1 md:grid-cols-2 gap-8">
