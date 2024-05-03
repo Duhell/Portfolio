@@ -7,11 +7,16 @@
             <a x-bind:class="{'active': isActive === 'contact' }" x-on:click="isActive = 'contact',$dispatch('changeTitle','Contact')" class=" hover:underline hover:underline-offset-8 cursor-pointer" hx-target="#app" hx-get="/resources/views/contact.html">Contact</a>
         </div>
 
-        <div class="block md:hidden">
-            <button x-on:click="show = !show" >
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+        <div class="block md:hidden mr-4">
+            <button x-transition:enter="transition ease-out duration-300"
+            x-transition:enter-start="opacity-0 scale-90"
+            x-transition:enter-end="opacity-100 scale-100"
+            x-transition:leave="transition ease-in duration-300"
+            x-transition:leave-start="opacity-100 scale-100"
+            x-transition:leave-end="opacity-0 scale-90" x-show="!show" x-on:click="show = !show" >
+                <svg  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
-                </svg>
+                </svg>     
             </button>
         </div>
     </div>
@@ -25,10 +30,17 @@
     x-transition:leave-start="opacity-100 scale-100"
     x-transition:leave-end="opacity-0 scale-90"
     x-show="show" class="px-6 block md:hidden">
-        <div class="space-x-4 p-4 text-sm bg-custom-900 rounded-md">
-            <a x-bind:class="{'active': isActive === 'about' }" x-on:click="isActive = 'about',$dispatch('changeTitle','About')" class="hover:underline hover:underline-offset-8 cursor-pointer" hx-target="#app" hx-get="/resources/views/about.html">About</a>
-            <a x-bind:class="{'active': isActive === 'projects' }" x-on:click="isActive = 'projects',$dispatch('changeTitle','Projects')" class=" hover:underline hover:underline-offset-8 cursor-pointer" hx-target="#app" hx-get="/resources/views/projects.html">Projects</a>
-            <a x-bind:class="{'active': isActive === 'contact' }" x-on:click="isActive = 'contact',$dispatch('changeTitle','Contact')" class=" hover:underline hover:underline-offset-8 cursor-pointer" hx-target="#app" hx-get="/resources/views/contact.html">Contact</a>
+        <div class=" p-4 text-sm flex justify-between items-center bg-custom-900 rounded-md">
+            <div class="space-x-4">
+                <a x-bind:class="{'active': isActive === 'about' }" x-on:click="isActive = 'about',$dispatch('changeTitle','About')" class="hover:underline hover:underline-offset-8 cursor-pointer" hx-target="#app" hx-get="/resources/views/about.html">About</a>
+                <a x-bind:class="{'active': isActive === 'projects' }" x-on:click="isActive = 'projects',$dispatch('changeTitle','Projects')" class=" hover:underline hover:underline-offset-8 cursor-pointer" hx-target="#app" hx-get="/resources/views/projects.html">Projects</a>
+                <a x-bind:class="{'active': isActive === 'contact' }" x-on:click="isActive = 'contact',$dispatch('changeTitle','Contact')" class=" hover:underline hover:underline-offset-8 cursor-pointer" hx-target="#app" hx-get="/resources/views/contact.html">Contact</a>
+            </div>
+            <button x-on:click="show = !show" >
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                  </svg>                 
+            </button>
         </div>
     </div>
 </nav>
