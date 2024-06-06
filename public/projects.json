@@ -39,6 +39,14 @@
             "link":"https://sultanalfouzanco.online/",
             "github":"https://github.com/Duhell/Sultanalfouzanco",
             "img":"./sultan.png"
+        },
+        {
+            "project_name":"Youtube Music Converter",
+            "status":"Live",
+            "description": "A simple web application to convert youtube music videos to mp3 songs. Made using React and Tailwind Css.",
+            "link":"https://ytmusic-np1p3cffi-duhells-projects.vercel.app/",
+            "github":"https://github.com/Duhell/React-YT-Music-Converter",
+            "img":"./yt.png"
         }
     ]
 }
